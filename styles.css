@@ -1,21 +1,21 @@
-body{
- font-family: 'Poppins', sans-serif;
- background: linear-gradient(to right, rgb(0, 0, 0), rgb(119, 0, 255));
- display: flex;
- justify-content: center;
- align-items: center;
- height: 100vh;
- margin: 0;
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(119, 0, 255));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-.card{
-    animation: fadeInUp 0.6s ease-out;
-    width: 350px;
-    background-color: rgb(24, 0, 61);
-    border-radius: 25px;
-    box-shadow: 0px 4px 10px black;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
+.card {
+  animation: fadeInUp 0.6s ease-out;
+  width: 350px;
+  background-color: rgb(24, 0, 61);
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px black;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
 }
 
 @keyframes fadeInUp {
@@ -23,80 +23,128 @@ body{
   to { opacity: 1; transform: translateY(0); }
 }
 
-.card:hover{
-    transform: translateY(-30px) scale(1.05);
-    box-shadow: 0px 10px 20px rgb(155, 89, 194);
+.card:hover {
+  transform: translateY(-30px) scale(1.05);
+  box-shadow: 0px 10px 20px rgb(155, 89, 194);
 }
 
-.card__image{
-    width: 100%;
-    height: auto;
-    display: block;
+.card__image {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-.card__content{
-    padding: 15px;
-    text-align: center;
+.card__header {
+  text-align: center;
+  margin-top: -40px;
 }
 
-.card__content__title{
-    font-size: 1.5rem;
-    color: white;
-    margin: 0 0 10px 0;
-    text-shadow: 0px 2px 20px black;
-    background: linear-gradient(90deg, #ff00ff, #00ffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.card__avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #ff00ff;
 }
 
-.card__content__description{
-    font-size: 1rem;
-    line-height: 1.5;
-    color: lightgray;
-    text-shadow: 0px 1px 3px black;
-    margin: 0 0 15px 0;
+.card__content {
+  padding: 15px;
+  text-align: center;
 }
 
-.card__actions{
-    padding:  0 20px 20px;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+.card__content__title {
+  font-size: 1.5rem;
+  color: white;
+  margin: 10px 0;
+  text-shadow: 0px 2px 20px black;
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.card__button{
-    flex-grow: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-    background: linear-gradient(90deg, #360c36, #8000ff);
-    transition: all 0.3s ease;
+.card__content__description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: lightgray;
+  text-shadow: 0px 1px 3px black;
+  margin: 0 0 15px 0;
 }
 
-.card__button--primary{
-    background-color: rgb(121, 7, 115);
-    color: white;
+.card__features {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  color: #dcdcdc;
+  text-align: left;
 }
 
-.card__button--primary:hover{
-    background: linear-gradient(90deg, #00127a, #3d023d);
-    transform: scale(1.05);
-    box-shadow: 0px 4px 15px rgb(199, 58, 255);
-    text-shadow: 0px 2px 5px black;
+.card__progress {
+  background: #333;
+  border-radius: 10px;
+  height: 10px;
+  margin: 15px 0;
 }
 
-.card__button--secondary{
-    background-color: rgb(121,7,115);
-    color: white;
+.card__progress-bar {
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
+  height: 100%;
+  border-radius: 10px;
 }
 
-.card__button--secondary:hover{
- background: linear-gradient(90deg, #0e77bd, #ff00ff);
+.card__actions {
+  padding: 0 20px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card__button {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: linear-gradient(90deg, #360c36, #8000ff);
+}
+
+.card__button--primary {
+  background-color: rgb(121, 7, 115);
+  color: white;
+}
+
+.card__button--primary:hover {
+  background: linear-gradient(90deg, #00127a, #3d023d);
   transform: scale(1.05);
-    box-shadow: 0px 4px 15px rgb(0, 247, 255);
-    text-shadow: 0px 2px 5px black;
+  box-shadow: 0px 4px 15px rgb(199, 58, 255);
+  text-shadow: 0px 2px 5px black;
 }
 
+.card__button--secondary {
+  background-color: rgb(121,7,115);
+  color: white;
+}
+
+.card__button--secondary:hover {
+  background: linear-gradient(90deg, #0e77bd, #ff00ff);
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgb(0, 247, 255);
+  text-shadow: 0px 2px 5px black;
+}
+
+.card__footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  border-top: 1px solid #444;
+}
+
+.card__footer a {
+  color: #00ffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.card__footer a:hover {
+  color: #ff00ff;
+}
